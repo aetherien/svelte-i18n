@@ -35,6 +35,7 @@
     "test": "cross-env NODE_ICU_DATA=node_modules/full-icu jest",
     "test:ci": "pnpm test",
     "lint": "eslint \"{src,test}/**/*.ts\"",
+    "lint:fix": "eslint \"{src,test}/**/*.ts\" --fix",
     "format": "prettier --loglevel silent --write \"{src,test}/**/*.ts\"",
     "release": " git add package.json && git commit -m \"chore(release): v$npm_package_version :tada:\"",
     "prebuild": "pnpm clean",

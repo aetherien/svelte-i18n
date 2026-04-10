@@ -56,7 +56,7 @@ function loadLocaleQueue(locale: string, localeQueue: MessagesLoader[]) {
       // todo: maybe don't just remove, but add to a `loading` set?
       removeLoaderFromQueue(locale, loader);
 
-      return loader().then((partial) => partial.default || partial);
+      return loader().then((partial) => partial.default ?? partial);
     }),
   );
 

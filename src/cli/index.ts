@@ -1,5 +1,5 @@
-import fs from 'fs';
-import { dirname, resolve } from 'path';
+import fs from 'node:fs';
+import { dirname, resolve } from 'node:path';
 
 import color from 'cli-color';
 import sade from 'sade';
@@ -71,7 +71,7 @@ program
     }
 
     const svelteConfig = await import(resolvedConfigPath)
-      .then((mod) => mod.default || mod)
+      .then((mod) => mod.default ?? mod)
       .catch(() => null);
 
     let accumulator = {};

@@ -1,4 +1,3 @@
-/* eslint-disable node/global-require */
 import { get } from 'svelte/store';
 
 import { init, getOptions, defaultFormats } from '../../src/runtime/configs';
@@ -28,12 +27,14 @@ test('inits the initial locale by string', () => {
   expect(get($locale)).toBe('en');
 });
 
-test('adds custom formats for time, date and number values', () => {
-  const customFormats = require('../fixtures/formats.json');
+test('adds custom formats for time, date and number values', async () => {
+  const customFormats = await import('../fixtures/formats.json').then(
+    (m) => m.default,
+  );
 
   init({
     fallbackLocale: 'en',
-    formats: customFormats,
+    formats: customFormats as any,
   });
   expect(getOptions().formats).toMatchObject(defaultFormats);
   expect(getOptions().formats).toMatchObject(customFormats);

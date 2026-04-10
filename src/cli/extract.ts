@@ -65,13 +65,18 @@ function getLibImportDeclarations(ast: Ast): ImportDeclaration[] {
 function getDefineMessagesSpecifier(decl: ImportDeclaration) {
   return decl.specifiers.find(
     (spec) =>
-      'imported' in spec && spec.imported.name === DEFINE_MESSAGES_METHOD_NAME,
+      'imported' in spec &&
+      spec.imported.type === 'Identifier' &&
+      spec.imported.name === DEFINE_MESSAGES_METHOD_NAME,
   ) as ImportSpecifier;
 }
 
 function getFormatSpecifiers(decl: ImportDeclaration) {
   return decl.specifiers.filter(
-    (spec) => 'imported' in spec && FORMAT_METHOD_NAMES.has(spec.imported.name),
+    (spec) =>
+      'imported' in spec &&
+      spec.imported.type === 'Identifier' &&
+      FORMAT_METHOD_NAMES.has(spec.imported.name),
   ) as ImportSpecifier[];
 }
 

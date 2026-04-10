@@ -1,5 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-types
-type MemoizedFunction = <F extends Function>(fn: F) => F;
+type MemoizedFunction = <F extends (...args: any[]) => any>(fn: F) => F;
 
 const monadicMemoize: MemoizedFunction = (fn) => {
   const cache = Object.create(null);
