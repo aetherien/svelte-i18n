@@ -112,9 +112,6 @@ jobs:
 
       - name: Publish package
         run: |
-          # Install production dependencies only
-          npm ci --omit=dev
-
           # Publish package
           npm publish
 
