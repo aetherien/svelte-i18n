@@ -1,5 +1,5 @@
 {
-  "name": "svelte-i18n",
+  "name": "@aetherien/svelte-i18n",
   "version": "4.0.4",
   "type": "module",
   "main": "dist/runtime.js",
@@ -13,8 +13,8 @@
   },
   "license": "MIT",
   "description": "Internationalization library for Svelte",
-  "author": "Christian Kaisermann <christian@kaisermann.me>",
-  "repository": "https://github.com/kaisermann/svelte-i18n",
+  "author": "Christian Kaisermann <christian@kaisermann.me>. Modified by Aetherien BV.",
+  "repository": "git+https://github.com/aetherien/svelte-i18n",
   "keywords": [
     "svelte",
     "i18n",
@@ -97,5 +97,8 @@
     "intl-messageformat": "^10.5.3",
     "sade": "^1.8.1",
     "tiny-glob": "^0.2.9"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
