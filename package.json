@@ -59,7 +59,7 @@
     "svelte": "^3 || ^4 || ^5"
   },
   "devDependencies": {
-    "@kiwi/eslint-config": "^2.2.8",
+    "@kiwi/eslint-config": "^4.2.0",
     "@kiwi/prettier-config": "^2.2.8",
     "@rollup/plugin-commonjs": "^25.0.4",
     "@types/cli-color": "^2.0.2",
