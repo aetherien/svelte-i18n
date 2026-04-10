@@ -62,7 +62,7 @@
   "devDependencies": {
     "@kiwi/eslint-config": "^4.2.0",
     "@kiwi/prettier-config": "^2.2.8",
-    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-commonjs": "^29.0.2",
     "@types/cli-color": "^2.0.2",
     "@types/dlv": "^1.1.2",
     "@types/estree": "1.0.8",
