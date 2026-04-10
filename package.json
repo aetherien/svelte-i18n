@@ -40,7 +40,8 @@
     "prebuild": "pnpm clean",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md",
     "prepublishOnly": "pnpm test -- --no-cache && pnpm build && publint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "version:patch": "npm version patch --no-git-tag-version"
   },
   "files": [
     "dist/"

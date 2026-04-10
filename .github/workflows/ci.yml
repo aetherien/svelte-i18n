@@ -55,3 +55,66 @@ jobs:
       - run: pnpm run test:ci
         env:
           CI: true
+
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    needs: [Tests]
+
+    permissions:
+      contents: write
+      packages: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Increment patch version
+        run: |
+          echo "Current version: $(node -p "require('./package.json').version")"
+          npm run version:patch
+          echo "New version: $(node -p "require('./package.json').version")"
+
+      - name: Update package-lock.json
+        run: npm install --package-lock-only
+
+      - name: Commit version bump
+        run: |
+          git add package.json package-lock.json
+          git commit -m "chore: bump version to $(node -p "require('./package.json').version") [skip ci]"
+          git push origin ${{ github.ref_name }}
+
+      - name: Get package version
+        run: |
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+          echo "PACKAGE_VERSION=${PACKAGE_VERSION}" >> $GITHUB_ENV
+          echo "Package version: ${PACKAGE_VERSION}"
+
+      - name: Authenticate to GitHub Packages
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}" >> ~/.npmrc
+
+      - name: Publish package
+        run: |
+          # Install production dependencies only
+          npm ci --omit=dev
+
+          # Publish package
+          npm publish
+
