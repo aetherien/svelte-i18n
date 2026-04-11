@@ -1,6 +1,6 @@
 {
   "name": "@aetherien/svelte-i18n",
-  "version": "4.0.10",
+  "version": "4.0.11",
   "type": "module",
   "main": "dist/runtime.js",
   "exports": {
