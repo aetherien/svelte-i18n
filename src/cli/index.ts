@@ -53,7 +53,7 @@ program
   )
   .action(async (globStr, output, { shallow, overwrite, config }) => {
     const filesToExtract = (await glob(globStr)).filter((file) =>
-      file.match(/\.html|svelte$/i),
+      file.match(/\.(html|svelte)$/i),
     );
 
     const isConfigDir = await isDirectory(config);

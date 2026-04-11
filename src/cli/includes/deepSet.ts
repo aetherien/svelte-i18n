@@ -1,6 +1,6 @@
 /* eslint-disable no-multi-assign */
 /* eslint-disable no-return-assign */
-const isNumberString = (n: string) => !Number.isNaN(parseInt(n, 10));
+const isNumberString = (n: string) => !Number.isNaN(Number.parseInt(n, 10));
 
 export function deepSet(obj: any, path: string, value: any) {
   const parts = path.replace(/\[(\w+)\]/gi, '.$1').split('.');

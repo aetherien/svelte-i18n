@@ -31,7 +31,7 @@ function isFormatCall(node: Node, imports: Set<string>) {
     identifier = node.callee;
   }
 
-  if (!identifier || identifier.type !== 'Identifier') {
+  if (identifier?.type !== 'Identifier') {
     return false;
   }
 
@@ -43,11 +43,7 @@ function isFormatCall(node: Node, imports: Set<string>) {
 function isMessagesDefinitionCall(node: Node, methodName: string) {
   if (node.type !== 'CallExpression') return false;
 
-  return (
-    node.callee &&
-    node.callee.type === 'Identifier' &&
-    node.callee.name === methodName
-  );
+  return node?.callee.type === 'Identifier' && node.callee.name === methodName;
 }
 
 function getLibImportDeclarations(ast: Ast): ImportDeclaration[] {
@@ -178,7 +174,7 @@ export function collectMessages(markup: string): Message[] {
         const node = pathNode as Literal;
         const id = node.value as string;
 
-        if (options && options.type === 'ObjectExpression') {
+        if (options?.type === 'ObjectExpression') {
           // _(id, { ...opts })
           messageObj = getObjFromExpression(options);
           messageObj.id = id;
