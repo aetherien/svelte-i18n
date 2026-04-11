@@ -1,20 +1,7 @@
 {
   "name": "@aetherien/svelte-i18n",
   "version": "4.0.13",
-  "type": "module",
-  "main": "dist/runtime.js",
-  "exports": {
-    "types": "./dist/runtime.d.ts",
-    "default": "./dist/runtime.js"
-  },
-  "types": "dist/runtime.d.ts",
-  "bin": {
-    "svelte-i18n": "dist/cli.js"
-  },
-  "license": "MIT",
   "description": "Internationalization library for Svelte",
-  "author": "Christian Kaisermann <christian@kaisermann.me>. Modified by Aetherien BV.",
-  "repository": "git+https://github.com/aetherien/svelte-i18n",
   "keywords": [
     "svelte",
     "i18n",
@@ -22,31 +9,41 @@
     "localization",
     "translation"
   ],
-  "engines": {
-    "node": ">= 16"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aetherien/svelte-i18n.git"
   },
-  "volta": {
-    "node": "16.14.0"
+  "license": "MIT",
+  "author": "Christian Kaisermann <christian@kaisermann.me>. Modified by Aetherien BV.",
+  "type": "module",
+  "exports": {
+    "types": "./dist/runtime.d.ts",
+    "default": "./dist/runtime.js"
   },
-  "scripts": {
-    "clean": "rm -rf dist/",
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "test": "npm run lint && cross-env NODE_ICU_DATA=node_modules/full-icu jest",
-    "test:ci": "pnpm test",
-    "lint": "eslint \"{src,test}/**/*.ts\"",
-    "lint:fix": "eslint \"{src,test}/**/*.ts\" --fix",
-    "format": "prettier --loglevel silent --write \"{src,test}/**/*.ts\"",
-    "release": " git add package.json && git commit -m \"chore(release): v$npm_package_version :tada:\"",
-    "prebuild": "pnpm clean",
-    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md",
-    "prepublishOnly": "pnpm test && pnpm build && publint",
-    "prepare": "husky",
-    "version:patch": "npm version patch --no-git-tag-version"
+  "main": "dist/runtime.js",
+  "types": "dist/runtime.d.ts",
+  "bin": {
+    "svelte-i18n": "dist/cli.js"
   },
   "files": [
     "dist/"
   ],
+  "scripts": {
+    "prebuild": "pnpm clean",
+    "build": "rollup -c",
+    "clean": "rm -rf dist/",
+    "dev": "rollup -c -w",
+    "format": "prettier --loglevel silent --write \"{src,test}/**/*.ts\"",
+    "lint": "npm audit && npx sort-package-json --check && eslint \"{src,test}/**/*.ts\"",
+    "lint:fix": "npm audit fix && npm pkg fix && npx sort-package-json && eslint \"{src,test}/**/*.ts\" --fix",
+    "prepare": "husky",
+    "prepublishOnly": "pnpm test && pnpm build && publint",
+    "release": " git add package.json && git commit -m \"chore(release): v$npm_package_version :tada:\"",
+    "test": "npm run lint && cross-env NODE_ICU_DATA=node_modules/full-icu jest",
+    "test:ci": "pnpm test",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md",
+    "version:patch": "npm version patch --no-git-tag-version"
+  },
   "lint-staged": {
     "*.{ts,js}": [
       "eslint --fix",
@@ -56,8 +53,14 @@
       "prettier --write"
     ]
   },
-  "peerDependencies": {
-    "svelte": "^3 || ^4 || ^5"
+  "dependencies": {
+    "cli-color": "^2.0.4",
+    "deepmerge": "^4.3.1",
+    "esbuild": "^0.28.0",
+    "estree-walker": "^2",
+    "intl-messageformat": "^10.5.3",
+    "sade": "^1.8.1",
+    "tiny-glob": "^0.2.9"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -86,20 +89,21 @@
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-dts": "^6.4.1",
     "rollup-plugin-esbuild": "^6.2.1",
+    "sort-package-json": "^3.6.1",
     "svelte": "^5.55.3",
     "svelte-preprocess": "^5.0.4",
     "ts-jest": "^29.4.9",
     "typescript": "^6.0.2",
     "typescript-eslint": "^8.58.1"
   },
-  "dependencies": {
-    "cli-color": "^2.0.4",
-    "deepmerge": "^4.3.1",
-    "esbuild": "^0.28.0",
-    "estree-walker": "^2",
-    "intl-messageformat": "^10.5.3",
-    "sade": "^1.8.1",
-    "tiny-glob": "^0.2.9"
+  "peerDependencies": {
+    "svelte": "^3 || ^4 || ^5"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "volta": {
+    "node": "16.14.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
