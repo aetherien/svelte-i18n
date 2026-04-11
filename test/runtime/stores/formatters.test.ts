@@ -140,7 +140,7 @@ describe('format message', () => {
     const spy = jest.spyOn(global.console, 'warn').mockImplementation();
 
     expect(typeof formatMessage('form')).toBe('object');
-    expect(spy).toBeCalledWith(
+    expect(spy).toHaveBeenCalledWith(
       `[svelte-i18n] Message with id "form" must be of type "string", found: "object". Gettin its value through the "$format" method is deprecated; use the "json" method instead.`,
     );
 
@@ -157,7 +157,7 @@ describe('format message', () => {
 
     formatMessage('missing');
 
-    expect(spy).toBeCalledWith(
+    expect(spy).toHaveBeenCalledWith(
       `[svelte-i18n] The message "missing" was not found in "en".`,
     );
 

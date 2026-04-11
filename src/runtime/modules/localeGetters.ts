@@ -43,12 +43,12 @@ export const getLocaleFromQueryString = (search: string) => {
   // istanbul ignore next
   if (typeof window === 'undefined') return null;
 
-  return getFromQueryString(window.location.search.substr(1), search);
+  return getFromQueryString(window.location.search.slice(1), search);
 };
 
 export const getLocaleFromHash = (hash: string) => {
   // istanbul ignore next
   if (typeof window === 'undefined') return null;
 
-  return getFromQueryString(window.location.hash.substr(1), hash);
+  return getFromQueryString(window.location.hash.slice(1), hash);
 };

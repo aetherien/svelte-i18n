@@ -88,7 +88,7 @@ describe('date formatter', () => {
 
     expect(() =>
       getDateFormatter({ locale: 'pt-BR', format: 'foo' }).format(date),
-    ).toThrowError(`[svelte-i18n] Unknown "foo" date format.`);
+    ).toThrow(`[svelte-i18n] Unknown "foo" date format.`);
   });
 
   it('formats a date with a custom format', () => {
@@ -156,7 +156,7 @@ describe('time formatter', () => {
 
     expect(() =>
       getTimeFormatter({ locale: 'pt-BR', format: 'foo' }).format(time),
-    ).toThrowError(`[svelte-i18n] Unknown "foo" time format.`);
+    ).toThrow(`[svelte-i18n] Unknown "foo" time format.`);
   });
 
   it('formats a time with inline options', () => {
