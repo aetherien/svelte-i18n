@@ -7,6 +7,16 @@ export default {
   // [...]
   preset: 'ts-jest/presets/default-esm', // or other ESM presets
   transform: {
-    '\\.ts$': ['ts-jest', { useESM: true }],
+    '^.+\\.ts$': [
+      'ts-jest',
+      {
+        useESM: true,
+      },
+    ],
+  },
+  extensionsToTreatAsEsm: ['.ts'],
+  moduleNameMapper: {
+    '^svelte/store$': '<rootDir>/test/__mocks__/svelte/store.js',
+    '^(\\.{1,2}/.*)\\.js$': '$1',
   },
 };

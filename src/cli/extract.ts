@@ -6,7 +6,6 @@ import { getObjFromExpression } from './includes/getObjFromExpression';
 import { delve } from '../shared/delve';
 
 import type { Message, WalkerOperationThis } from './types';
-import type { Ast } from 'svelte/types/compiler/interfaces';
 import type {
   Node,
   ObjectExpression,
@@ -16,6 +15,9 @@ import type {
   Identifier,
   Literal,
 } from 'estree';
+
+// Svelte 5 uses legacy AST by default which returns Record<string, any>
+type LegacyAst = Record<string, any>;
 
 const LIB_NAME = 'svelte-i18n';
 const DEFINE_MESSAGES_METHOD_NAME = 'defineMessages';
@@ -45,7 +47,7 @@ function isMessagesDefinitionCall(node: Node, methodName: string) {
   return node?.callee.type === 'Identifier' && node.callee.name === methodName;
 }
 
-function getLibImportDeclarations(ast: Ast): ImportDeclaration[] {
+function getLibImportDeclarations(ast: LegacyAst): ImportDeclaration[] {
   const bodyElements = [
     ...(ast.instance?.content.body ?? []),
     ...(ast.module?.content.body ?? []),
@@ -75,7 +77,7 @@ function getFormatSpecifiers(decl: ImportDeclaration) {
   ) as ImportSpecifier[];
 }
 
-export function collectFormatCalls(ast: Ast) {
+export function collectFormatCalls(ast: LegacyAst) {
   const importDecls = getLibImportDeclarations(ast);
 
   if (importDecls.length === 0) return [];
@@ -112,7 +114,7 @@ export function collectFormatCalls(ast: Ast) {
 //       replace: (node: import("estree").BaseNode) => void;
 //   }, node: import("estree").BaseNode, parent: import("estree").BaseNode, key: string, index: number) => void;
 
-export function collectMessageDefinitions(ast: Ast) {
+export function collectMessageDefinitions(ast: LegacyAst) {
   const definitions: ObjectExpression[] = [];
   const defineImportDecl = getLibImportDeclarations(ast).find(
     getDefineMessagesSpecifier,
