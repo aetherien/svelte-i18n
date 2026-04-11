@@ -99,9 +99,7 @@ export function collectFormatCalls(ast: LegacyAst) {
     }
   }
 
-  // @ts-expect-error - https://github.com/Rich-Harris/estree-walker/issues/28
   walk(ast.instance as any, { enter });
-  // @ts-expect-error - https://github.com/Rich-Harris/estree-walker/issues/28
   walk(ast.html as any, { enter });
 
   return calls;
@@ -137,17 +135,14 @@ export function collectMessageDefinitions(ast: LegacyAst) {
     },
   };
 
-  // @ts-expect-error - https://github.com/Rich-Harris/estree-walker/issues/28
   walk(ast.instance as any, nodeStepInstructions);
-  // @ts-expect-error - https://github.com/Rich-Harris/estree-walker/issues/28
   walk(ast.module as any, nodeStepInstructions);
 
   return definitions.flatMap((definitionDict) =>
     definitionDict.properties.map((propNode) => {
       if (propNode.type !== 'Property') {
         throw new Error(
-          `Found invalid '${propNode.type}' at L${propNode.loc!.start.line}:${
-            propNode.loc!.start.column
+          `Found invalid '${propNode.type}' at L${propNode.loc!.start.line}:${propNode.loc!.start.column
           }`,
         );
       }

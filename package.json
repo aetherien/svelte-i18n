@@ -57,8 +57,8 @@
     "cli-color": "^2.0.4",
     "deepmerge": "^4.3.1",
     "esbuild": "^0.28.0",
-    "estree-walker": "^2",
-    "intl-messageformat": "^10.5.3",
+    "estree-walker": "3.0.3",
+    "intl-messageformat": "^11.2.0",
     "sade": "^1.8.1",
     "tiny-glob": "^0.2.9"
   },
