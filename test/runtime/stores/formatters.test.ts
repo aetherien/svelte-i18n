@@ -1,4 +1,3 @@
-/* eslint-disable line-comment-position */
 import { get } from 'svelte/store';
 
 import {
@@ -179,7 +178,6 @@ describe('format message', () => {
     $locale.set('en');
     const spy = jest.spyOn(global.console, 'warn').mockImplementation();
 
-    // eslint-disable-next-line line-comment-position
     formatMessage('with-syntax-error', { values: { name: 'John' } });
 
     expect(spy).toHaveBeenCalledWith(

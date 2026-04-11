@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { walk } from 'estree-walker';
 import { parse } from 'svelte/compiler';
 

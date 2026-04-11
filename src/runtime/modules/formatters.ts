@@ -106,7 +106,6 @@ export const getTimeFormatter: MemoizedDateTimeFormatterFactoryOptional = ({
 } = {}) => createTimeFormatter({ locale, ...args });
 
 export const getMessageFormatter = monadicMemoize(
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   (message: string, locale: string = getCurrentLocale()!) =>
     new IntlMessageFormat(message, locale, getOptions().formats, {
       ignoreTag: getOptions().ignoreTag,
