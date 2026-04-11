@@ -22,7 +22,7 @@ export default {
   },
   extensionsToTreatAsEsm: ['.ts'],
   transformIgnorePatterns: [
-    'node_modules/(?!(intl-messageformat|@formatjs|estree-walker)/)',
+    'node_modules/(?!(.pnpm|intl-messageformat|@formatjs|estree-walker))',
   ],
   moduleNameMapper: {
     '^estree-walker$': '<rootDir>/node_modules/estree-walker/src/index.js',
