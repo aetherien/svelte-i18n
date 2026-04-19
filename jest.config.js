@@ -29,4 +29,6 @@ export default {
     '^svelte/store$': '<rootDir>/test/__mocks__/svelte/store.js',
     '^(\\.{1,2}/.*)\\.js$': '$1',
   },
+  testResultsProcessor: 'jest-sonar-reporter',
+  coverageReporters: ['text', 'lcov', 'json']
 };
