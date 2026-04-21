@@ -75,7 +75,7 @@
     "@types/sade": "^1.8.0",
     "conventional-changelog-cli": "^5.0.0",
     "cross-env": "^10.1.0",
-    "eslint": "^10.2.0",
+    "eslint": "^10.2.1",
     "full-icu": "^1.5.0",
     "globals": "^17.5.0",
     "husky": "^9.1.7",
@@ -86,7 +86,7 @@
     "prettier": "^3.8.3",
     "prettier-plugin-svelte": "^3.5.1",
     "publint": "^0.3.18",
-    "rollup": "^4.60.1",
+    "rollup": "^4.60.2",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-dts": "^6.4.1",
     "rollup-plugin-esbuild": "^6.2.1",
@@ -94,8 +94,8 @@
     "svelte": "^5.55.4",
     "svelte-preprocess": "^5.0.4",
     "ts-jest": "^29.4.9",
-    "typescript": "^6.0.2",
-    "typescript-eslint": "^8.58.2"
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.0"
   },
   "peerDependencies": {
     "svelte": "^3 || ^4 || ^5"
