@@ -81,6 +81,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 24
+          registry-url: https://npm.pkg.github.com
           cache: "npm"
 
       - name: Install Dependencies
@@ -100,9 +101,6 @@ jobs:
           npm run version:patch
           echo "New version: $(node -p "require('./package.json').version")"
 
-      - name: Update package-lock.json
-        run: npm install --package-lock-only
-
       - name: Commit version bump
         run: |
           git add package.json package-lock.json
@@ -115,12 +113,9 @@ jobs:
           echo "PACKAGE_VERSION=${PACKAGE_VERSION}" >> $GITHUB_ENV
           echo "Package version: ${PACKAGE_VERSION}"
 
-      - name: Authenticate to GitHub Packages
-        run: |
-          echo "//npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}" >> ~/.npmrc
-
       - name: Publish package
         run: |
           # Publish package
           npm publish
-
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
