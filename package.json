@@ -57,7 +57,7 @@
     "cli-color": "^2.0.4",
     "deepmerge": "^4.3.1",
     "estree-walker": "3.0.3",
-    "intl-messageformat": "^11.2.1",
+    "intl-messageformat": "^11.2.3",
     "sade": "^1.8.1",
     "tiny-glob": "^0.2.9"
   },
@@ -91,11 +91,11 @@
     "rollup-plugin-dts": "^6.4.1",
     "rollup-plugin-esbuild": "^6.2.1",
     "sort-package-json": "^3.6.1",
-    "svelte": "^5.55.4",
+    "svelte": "^5.55.5",
     "svelte-preprocess": "^5.0.4",
     "ts-jest": "^29.4.9",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.59.0"
+    "typescript-eslint": "^8.59.1"
   },
   "peerDependencies": {
     "svelte": "^3 || ^4 || ^5"
