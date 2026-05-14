@@ -58,7 +58,7 @@
     "cli-color": "^2.0.4",
     "deepmerge": "^4.3.1",
     "estree-walker": "3.0.3",
-    "intl-messageformat": "^11.2.4",
+    "intl-messageformat": "^11.2.5",
     "sade": "^1.8.1",
     "tiny-glob": "^0.2.9"
   },
@@ -81,7 +81,7 @@
     "jest-sonar-reporter": "^2.0.0",
     "knip": "^6.13.1",
     "prettier": "^3.8.3",
-    "publint": "^0.3.20",
+    "publint": "^0.3.21",
     "rollup": "^4.60.3",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-dts": "^6.4.1",
@@ -90,7 +90,7 @@
     "svelte": "^5.55.5",
     "ts-jest": "^29.4.9",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.59.2"
+    "typescript-eslint": "^8.59.3"
   },
   "peerDependencies": {
     "svelte": "^3 || ^4 || ^5"
