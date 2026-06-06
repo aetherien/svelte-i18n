@@ -58,7 +58,7 @@
     "cli-color": "^2.0.4",
     "deepmerge": "^4.3.1",
     "estree-walker": "3.0.3",
-    "intl-messageformat": "11.2.7",
+    "intl-messageformat": "11.2.8",
     "sade": "^1.8.1",
     "tiny-glob": "^0.2.9"
   },
@@ -79,18 +79,18 @@
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
     "jest-sonar-reporter": "^2.0.0",
-    "knip": "6.15.0",
+    "knip": "6.16.0",
     "prettier": "^3.8.3",
     "publint": "^0.3.21",
-    "rollup": "^4.60.4",
+    "rollup": "4.61.1",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-dts": "^6.4.1",
     "rollup-plugin-esbuild": "^6.2.1",
-    "sort-package-json": "^3.6.1",
-    "svelte": "5.56.0",
+    "sort-package-json": "4.0.0",
+    "svelte": "5.56.2",
     "ts-jest": "29.4.11",
     "typescript": "^6.0.3",
-    "typescript-eslint": "8.60.0"
+    "typescript-eslint": "8.60.1"
   },
   "peerDependencies": {
     "svelte": "^3 || ^4 || ^5"
@@ -103,5 +103,10 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
+  },
+  "allowScripts": {
+    "es5-ext@0.10.64": true,
+    "esbuild@0.28.0": true,
+    "unrs-resolver@1.11.1": true
   }
 }
