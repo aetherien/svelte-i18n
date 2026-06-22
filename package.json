@@ -35,8 +35,9 @@
     "dev": "rollup -c -w",
     "format": "prettier --loglevel silent --write \"{src,test}/**/*.ts\"",
     "knip": "knip",
-    "lint": "npm audit && npx sort-package-json --check && eslint \"{src,test}/**/*.ts\"",
+    "lint": "npx sort-package-json --check && eslint \"{src,test}/**/*.ts\"",
     "lint:fix": "npm audit fix && npm pkg fix && npx sort-package-json && eslint \"{src,test}/**/*.ts\" --fix",
+    "lint:restore": "npm audit && npx sort-package-json --check && eslint \"{src,test}/**/*.ts\"",
     "prepare": "husky",
     "prepublishOnly": "pnpm test && pnpm build && publint",
     "release": " git add package.json && git commit -m \"chore(release): v$npm_package_version :tada:\"",
@@ -69,7 +70,7 @@
     "@types/cli-color": "^2.0.6",
     "@types/estree": "^1.0.9",
     "@types/jest": "^30.0.0",
-    "@types/node": "25.9.3",
+    "@types/node": "26.0.0",
     "conventional-changelog-cli": "^5.0.0",
     "cross-env": "^10.1.0",
     "esbuild": "^0.28.0",
@@ -79,10 +80,10 @@
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
     "jest-sonar-reporter": "^2.0.0",
-    "knip": "6.16.1",
+    "knip": "6.17.1",
     "prettier": "3.8.4",
     "publint": "^0.3.21",
-    "rollup": "4.61.1",
+    "rollup": "4.62.2",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-dts": "^6.4.1",
     "rollup-plugin-esbuild": "^6.2.1",
@@ -90,7 +91,7 @@
     "svelte": "5.56.3",
     "ts-jest": "29.4.11",
     "typescript": "^6.0.3",
-    "typescript-eslint": "8.61.0"
+    "typescript-eslint": "8.61.1"
   },
   "peerDependencies": {
     "svelte": "^3 || ^4 || ^5"
