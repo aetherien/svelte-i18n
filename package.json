@@ -58,7 +58,7 @@
     "cli-color": "^2.0.4",
     "deepmerge": "^4.3.1",
     "estree-walker": "3.0.3",
-    "intl-messageformat": "11.2.9",
+    "intl-messageformat": "11.2.11",
     "sade": "^1.8.1",
     "tiny-glob": "^0.2.9"
   },
@@ -79,7 +79,7 @@
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
     "jest-sonar-reporter": "^2.0.0",
-    "knip": "6.26.0",
+    "knip": "6.27.0",
     "prettier": "3.8.4",
     "publint": "^0.3.21",
     "rollup": "4.62.2",
@@ -87,7 +87,7 @@
     "rollup-plugin-dts": "^6.4.1",
     "rollup-plugin-esbuild": "^6.2.1",
     "sort-package-json": "4.0.0",
-    "svelte": "5.56.4",
+    "svelte": "5.56.5",
     "ts-jest": "29.4.11",
     "typescript": "^6.0.3",
     "typescript-eslint": "8.61.1"
