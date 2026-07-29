@@ -35,8 +35,9 @@
     "dev": "rollup -c -w",
     "format": "prettier --loglevel silent --write \"{src,test}/**/*.ts\"",
     "knip": "knip",
-    "lint": "npm audit && npx sort-package-json --check && eslint \"{src,test}/**/*.ts\"",
-    "lint:fix": "npm audit fix && npm pkg fix && npx sort-package-json && eslint \"{src,test}/**/*.ts\" --fix",
+    "lint": "npx sort-package-json --check && eslint \"{src,test}/**/*.ts\"",
+    "lint:fix": " npm pkg fix && npx sort-package-json && eslint \"{src,test}/**/*.ts\" --fix && npm audit fix",
+    "lint:restore": "npm audit && npx sort-package-json --check && eslint \"{src,test}/**/*.ts\"",
     "prepare": "husky",
     "prepublishOnly": "pnpm test && pnpm build && publint",
     "release": " git add package.json && git commit -m \"chore(release): v$npm_package_version :tada:\"",
@@ -73,24 +74,24 @@
     "conventional-changelog-cli": "^5.0.0",
     "cross-env": "^10.1.0",
     "esbuild": "^0.28.0",
-    "eslint": "10.7.0",
-    "globals": "17.7.0",
+    "eslint": "10.8.0",
+    "globals": "17.8.0",
     "husky": "^9.1.7",
-    "jest": "^30.4.2",
+    "jest": "30.4.2",
     "jest-environment-jsdom": "^30.4.1",
     "jest-sonar-reporter": "^2.0.0",
-    "knip": "6.27.0",
-    "prettier": "3.9.5",
+    "knip": "6.29.0",
+    "prettier": "3.9.6",
     "publint": "^0.3.21",
     "rollup": "4.62.2",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-dts": "^6.4.1",
     "rollup-plugin-esbuild": "^6.2.1",
     "sort-package-json": "4.0.0",
-    "svelte": "5.56.6",
-    "ts-jest": "29.4.11",
+    "svelte": "5.56.8",
+    "ts-jest": "29.4.12",
     "typescript": "^6.0.3",
-    "typescript-eslint": "8.64.0"
+    "typescript-eslint": "8.65.0"
   },
   "peerDependencies": {
     "svelte": "^3 || ^4 || ^5"
@@ -106,7 +107,7 @@
   },
   "allowScripts": {
     "es5-ext@0.10.64": true,
-    "esbuild@0.28.0": true,
-    "unrs-resolver@1.11.1": true
+    "esbuild@0.28.1": true,
+    "unrs-resolver@1.12.2": true
   }
 }
