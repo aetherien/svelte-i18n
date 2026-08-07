@@ -84,7 +84,7 @@
     "publint": "^0.3.21",
     "rollup": "4.62.4",
     "rollup-plugin-auto-external": "^2.0.0",
-    "rollup-plugin-dts": "^6.4.1",
+    "rollup-plugin-dts": "^6.5.1",
     "rollup-plugin-esbuild": "^6.2.1",
     "sort-package-json": "4.0.0",
     "svelte": "5.56.8",
