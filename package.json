@@ -82,7 +82,7 @@
     "jest-sonar-reporter": "^2.0.0",
     "knip": "6.32.2",
     "prettier": "3.9.6",
-    "publint": "0.3.23",
+    "publint": "0.3.24",
     "rollup": "4.62.4",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-dts": "6.5.1",
