@@ -80,7 +80,7 @@
     "jest": "30.4.2",
     "jest-environment-jsdom": "^30.4.1",
     "jest-sonar-reporter": "^2.0.0",
-    "knip": "6.32.2",
+    "knip": "6.33.0",
     "prettier": "3.9.6",
     "publint": "0.3.24",
     "rollup": "4.63.1",
