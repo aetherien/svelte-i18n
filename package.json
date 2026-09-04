@@ -77,7 +77,7 @@
     "eslint": "10.9.1",
     "globals": "17.11.0",
     "husky": "^9.1.7",
-    "jest": "30.4.2",
+    "jest": "30.5.1",
     "jest-environment-jsdom": "^30.4.1",
     "jest-sonar-reporter": "^2.0.0",
     "knip": "6.32.2",
