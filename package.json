@@ -42,6 +42,7 @@
     "release": " git add package.json && git commit -m \"chore(release): v$npm_package_version :tada:\"",
     "test": "npm run lint && cross-env NODE_ICU_DATA=node_modules/full-icu jest",
     "test:ci": "pnpm test",
+    "update": "npx npm-check-updates -u && npm install && npm update",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md",
     "version:patch": "npm version patch --no-git-tag-version"
   },
@@ -81,7 +82,8 @@
     "jest-environment-jsdom": "30.5.2",
     "jest-sonar-reporter": "^2.0.0",
     "knip": "6.37.0",
-    "prettier": "3.9.8",
+    "npm-check-updates": "^23.1.0",
+    "prettier": "3.9.9",
     "publint": "0.3.24",
     "rollup": "4.63.4",
     "rollup-plugin-auto-external": "^2.0.0",
@@ -91,7 +93,7 @@
     "svelte": "5.57.1",
     "ts-jest": "29.4.12",
     "typescript": "^6.0.3",
-    "typescript-eslint": "8.70.0"
+    "typescript-eslint": "8.70.1"
   },
   "peerDependencies": {
     "svelte": "^3 || ^4 || ^5"
