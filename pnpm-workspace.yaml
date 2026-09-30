@@ -3,3 +3,5 @@ allowBuilds:
   es5-ext: true
   esbuild: true
   unrs-resolver: true
+minimumReleaseAgeExclude:
+  - knip@6.39.0
