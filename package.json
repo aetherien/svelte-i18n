@@ -46,6 +46,12 @@
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md",
     "version:patch": "npm version patch --no-git-tag-version"
   },
+  "allowScripts": {
+    "@parcel/watcher@2.6.0": true,
+    "es5-ext@0.10.64": true,
+    "esbuild@0.28.2": true,
+    "unrs-resolver@1.12.2": true
+  },
   "lint-staged": {
     "*.{ts,js}": [
       "eslint --fix",
@@ -59,7 +65,7 @@
     "cli-color": "^2.0.4",
     "deepmerge": "^4.3.1",
     "estree-walker": "3.0.3",
-    "intl-messageformat": "12.1.2",
+    "intl-messageformat": "12.1.4",
     "sade": "^1.8.1",
     "tiny-glob": "^0.2.9"
   },
@@ -70,30 +76,30 @@
     "@types/cli-color": "^2.0.6",
     "@types/estree": "^1.0.9",
     "@types/jest": "^30.0.0",
-    "@types/node": "26.6.4",
+    "@types/node": "26.6.5",
     "conventional-changelog": "8.1.3",
     "conventional-changelog-angular": "9.4.0",
     "cross-env": "^10.1.0",
     "esbuild": "0.28.2",
-    "eslint": "10.12.0",
+    "eslint": "10.13.0",
     "globals": "17.13.0",
     "husky": "^9.1.7",
     "jest": "30.5.2",
     "jest-environment-jsdom": "30.5.2",
     "jest-sonar-reporter": "^2.0.0",
-    "knip": "6.39.0",
-    "npm-check-updates": "^23.1.0",
-    "prettier": "3.9.9",
+    "knip": "6.42.1",
+    "npm-check-updates": "23.1.1",
+    "prettier": "3.9.10",
     "publint": "0.3.25",
-    "rollup": "4.64.0",
+    "rollup": "4.65.0",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-dts": "6.5.1",
     "rollup-plugin-esbuild": "^6.2.1",
-    "sort-package-json": "4.0.0",
-    "svelte": "5.57.1",
-    "ts-jest": "29.4.14",
-    "typescript": "^6.0.3",
-    "typescript-eslint": "8.71.0"
+    "sort-package-json": "4.1.0",
+    "svelte": "5.57.2",
+    "ts-jest": "29.4.15",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.0"
   },
   "peerDependencies": {
     "svelte": "^3 || ^4 || ^5"
@@ -106,11 +112,5 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
-  },
-  "allowScripts": {
-    "es5-ext@0.10.64": true,
-    "esbuild@0.28.2": true,
-    "unrs-resolver@1.12.2": true,
-    "@parcel/watcher@2.6.0": true
   }
 }
