@@ -91,7 +91,7 @@
     "npm-check-updates": "23.1.1",
     "prettier": "3.9.10",
     "publint": "0.3.25",
-    "rollup": "4.65.0",
+    "rollup": "4.65.1",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-dts": "6.5.1",
     "rollup-plugin-esbuild": "^6.2.1",
