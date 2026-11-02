@@ -74,7 +74,7 @@
     "@kiwi/prettier-config": "^4.2.0",
     "@rollup/plugin-commonjs": "29.0.3",
     "@types/cli-color": "^2.0.6",
-    "@types/estree": "^1.0.9",
+    "@types/estree": "^1.0.10",
     "@types/jest": "^30.0.0",
     "@types/node": "26.6.5",
     "conventional-changelog": "8.1.3",
