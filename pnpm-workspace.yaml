@@ -1,0 +1,6 @@
+allowBuilds:
+  '@parcel/watcher': true
+  es5-ext: true
+  esbuild: true
+  unrs-resolver: true
+minimumReleaseAge: 0 # Disables the check entirely
