@@ -32,7 +32,7 @@ importers:
         version: 10.0.1(eslint@10.14.0(jiti@2.7.0)(supports-color@8.1.1))
       '@kiwi/prettier-config':
         specifier: ^4.2.0
-        version: 4.2.0(prettier@3.10.1)(svelte@5.57.3(@typescript-eslint/types@8.70.1))
+        version: 4.2.0(prettier@3.10.1)(svelte@5.57.3(@typescript-eslint/types@8.72.2))
       '@rollup/plugin-commonjs':
         specifier: 29.0.3
         version: 29.0.3(rollup@4.68.2)
@@ -82,8 +82,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0
       knip:
-        specifier: 6.45.1
-        version: 6.45.1
+        specifier: 6.47.0
+        version: 6.47.0
       npm-check-updates:
         specifier: 23.1.1
         version: 23.1.1
@@ -110,7 +110,7 @@ importers:
         version: 4.1.0
       svelte:
         specifier: 5.57.3
-        version: 5.57.3(@typescript-eslint/types@8.70.1)
+        version: 5.57.3(@typescript-eslint/types@8.72.2)
       ts-jest:
         specifier: 29.4.15
         version: 29.4.15(@babel/core@7.29.7(supports-color@8.1.1))(@jest/transform@30.5.2(supports-color@8.1.1))(@jest/types@30.5.1)(@typescript/typescript6@6.0.2)(babel-jest@30.5.2(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1))(esbuild@0.28.2)(jest-util@30.5.1)(jest@30.5.2(@types/node@26.6.6)(supports-color@8.1.1))
@@ -1350,10 +1350,6 @@ packages:
       eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
       typescript: '>=4.8.4 <6.1.0'
 
-  '@typescript-eslint/types@8.70.1':
-    resolution: {integrity: sha512-Dm1ypdhhrGCTyyehxElhgJ6kgk8MVCv5qXdoOVqPr1uqk42jX8KjrZqhROvdShczA8qrDoYiOWn1ykWlx2k81Q==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
   '@typescript-eslint/types@8.72.2':
     resolution: {integrity: sha512-Xfn37OLZx03+PCU7qWx9DTv2FCRh1E6fk2+wONeNY15HXIwtcwuveaSwVpGAUptkNmPQegRxW5JyRel9T7wrog==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -2479,8 +2475,8 @@ packages:
   keyv@5.6.0:
     resolution: {integrity: sha512-CYDD3SOtsHtyXeEORYRx2qBtpDJFjRTGXUtmNEMGyzYOKj1TE3tycdlho7kA1Ufx9OYWZzg52QFBGALTirzDSw==}
 
-  knip@6.45.1:
-    resolution: {integrity: sha512-zp3zXKy2cZWiIttdlWU5fisKxVQaLSU6471ej0KGz1GdHdaHxpzTAO/LIyFNc3gU3v1W7LJaqvYumoO3l/u+6A==}
+  knip@6.47.0:
+    resolution: {integrity: sha512-nYmQnk0YqDXIJrYViJz88c8xw3tBDkpuAmofo58EkVPnKr6DnRKYtf6oIqcGVHZvXDE+gtmFuYx277/QsWng+A==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
@@ -3731,7 +3727,7 @@ snapshots:
 
   '@jest/pattern@30.5.0':
     dependencies:
-      '@types/node': 26.6.2
+      '@types/node': 26.6.6
       jest-regex-util: 30.5.0
 
   '@jest/reporters@30.5.2(supports-color@8.1.1)':
@@ -3819,7 +3815,7 @@ snapshots:
       '@jest/schemas': 30.5.0
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 26.6.2
+      '@types/node': 26.6.6
       '@types/yargs': 17.0.35
       chalk: 4.1.2
 
@@ -3850,10 +3846,10 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@kiwi/prettier-config@4.2.0(prettier@3.10.1)(svelte@5.57.3(@typescript-eslint/types@8.70.1))':
+  '@kiwi/prettier-config@4.2.0(prettier@3.10.1)(svelte@5.57.3(@typescript-eslint/types@8.72.2))':
     dependencies:
       prettier: 3.10.1
-      prettier-plugin-svelte: 3.5.2(prettier@3.10.1)(svelte@5.57.3(@typescript-eslint/types@8.70.1))
+      prettier-plugin-svelte: 3.5.2(prettier@3.10.1)(svelte@5.57.3(@typescript-eslint/types@8.72.2))
     transitivePeerDependencies:
       - svelte
 
@@ -4313,9 +4309,6 @@ snapshots:
       typescript: '@typescript/typescript6@6.0.2'
     transitivePeerDependencies:
       - supports-color
-
-  '@typescript-eslint/types@8.70.1':
-    optional: true
 
   '@typescript-eslint/types@8.72.2': {}
 
@@ -4909,11 +4902,11 @@ snapshots:
     dependencies:
       estraverse: 5.3.0
 
-  esrap@2.3.7(@typescript-eslint/types@8.70.1):
+  esrap@2.3.7(@typescript-eslint/types@8.72.2):
     dependencies:
       '@jridgewell/sourcemap-codec': 1.6.0
     optionalDependencies:
-      '@typescript-eslint/types': 8.70.1
+      '@typescript-eslint/types': 8.72.2
 
   esrecurse@4.3.0:
     dependencies:
@@ -5473,7 +5466,7 @@ snapshots:
   jest-util@30.5.1:
     dependencies:
       '@jest/types': 30.5.1
-      '@types/node': 26.6.2
+      '@types/node': 26.6.6
       chalk: 4.1.2
       ci-info: 4.4.0
       graceful-fs: 4.2.11
@@ -5575,7 +5568,7 @@ snapshots:
     dependencies:
       '@keyv/serialize': 1.1.1
 
-  knip@6.45.1:
+  knip@6.47.0:
     dependencies:
       formatly: 0.11.4
       get-tsconfig: 4.14.3
@@ -5836,10 +5829,10 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-svelte@3.5.2(prettier@3.10.1)(svelte@5.57.3(@typescript-eslint/types@8.70.1)):
+  prettier-plugin-svelte@3.5.2(prettier@3.10.1)(svelte@5.57.3(@typescript-eslint/types@8.72.2)):
     dependencies:
       prettier: 3.10.1
-      svelte: 5.57.3(@typescript-eslint/types@8.70.1)
+      svelte: 5.57.3(@typescript-eslint/types@8.72.2)
 
   prettier@3.10.1: {}
 
@@ -6068,7 +6061,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte@5.57.3(@typescript-eslint/types@8.70.1):
+  svelte@5.57.3(@typescript-eslint/types@8.72.2):
     dependencies:
       '@jridgewell/remapping': 2.3.5
       '@jridgewell/sourcemap-codec': 1.6.0
@@ -6080,7 +6073,7 @@ snapshots:
       clsx: 2.1.1
       devalue: 5.9.4
       esm-env: 1.2.2
-      esrap: 2.3.7(@typescript-eslint/types@8.70.1)
+      esrap: 2.3.7(@typescript-eslint/types@8.72.2)
       is-reference: 3.0.3
       locate-character: 3.0.0
       magic-string: 0.30.21
